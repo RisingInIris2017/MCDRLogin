@@ -18,8 +18,10 @@ Auth/Login plugin for MCDR
 目前有两种可能的思路：
 1. 使用现成的 UUIDAPI。
 https://github.com/RisingInIris2017/MCDReforgedPlugins/tree/master/UUIDAPI
-这一方法的缺陷是需要频繁调用来自一个国外网站的 API，如果服务器到该网站的连接不畅通，很有可能会导致登录插件的工作异常。
-但是这个 UUIDAPI 的代码仍然是重要的参考。
+<br>这一方法的缺陷是需要频繁调用来自一个国外网站的 API，如果服务器到该网站的连接不畅通，很有可能会导致登录插件的工作异常。
+<br>但是这个 UUIDAPI 的代码仍然是重要的参考。
 2. 从服务端的username.json读取玩家的UUID。
-这种方法的好处是节省了大量的服务端联网等待时间，对于已经在username.json中留下痕迹的老玩家，必须采用这种方法。
-对于从未登录过服务器，首次登录的新玩家，有待测试。
+<br>这种方法的好处是节省了大量的服务端联网等待时间，对于已经在username.json中留下痕迹的老玩家，必须采用这种方法。
+<br>对于从未登录过服务器，首次登录的新玩家，有待测试。
+3. 使用 https://gist.github.com/yushijinhun/69f68397c5bb5bee76e80d192295f6e0 中的算法生成离线 UUID。
+<br>不确定这个方法是否仍然适用于 1.16+，有待测试。
